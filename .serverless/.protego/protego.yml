@@ -1,0 +1,24 @@
+Account:
+  ProtegoAccessToken: 10780f68-99ae-4057-9040-97b2d9e35b0b:fpohqeazsf9fingptzpmxab4
+  StoreJobReport: true
+Globals:
+  Features:
+    PermissiveRole:
+      Enabled: true
+      FailThreshold: None
+    CredentialsUsage:
+      Enabled: true
+      FailThreshold: None
+    VulnerableDependency:
+      Enabled: true
+      FailThreshold: Critical
+    RuleViolation:
+      Enabled: true
+      FailThreshold: None
+Integrations:
+  Cloudformation:
+    Template: .serverless/.protego/compiledCloudFormationTemplate.json
+Functions:
+  HelloLambdaFunction:
+    CodeLocation: .serverless/lambda-cicd.zip
+    FriendlyName: hello
